@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Greeting Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Welcome Screen -->
+<div class="welcome-screen" id="welcomeScreen">
+    <h1>lumora-greeting-studio</h1>
+    <p>Creating beautiful moments...</p>
+    <div class="loader"></div>
+</div>
+
+    <div class="background-glow"></div>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <a href="#" class="logo">
+            <span class="logo-icon"></span>
+            lumora-greeting-studio<span></span>
+        </a>
+
+
+    </header>
+
+
+    <!-- Main Section -->
+
+    <main class="main-container">
+
+        <section class="hero">
+
+            <span class="hero-label">
+                CREATE YOUR MOMENT
+            </span>
+
+            <h1>
+                Every name has a
+                <span>beautiful story.</span>
+            </h1>
+
+            <p>
+                Enter your details and watch your personalized
+                greeting come to life.
+            </p>
+
+        </section>
+
+
+        <!-- App Layout -->
+
+        <section class="app-layout">
+
+            <!-- Input Panel -->
+
+            <div class="input-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <span class="small-label">PERSONALIZE</span>
+                        <h2>Create Greeting</h2>
+                    </div>
+
+                    <span class="step-number">01 / 02</span>
+
+                </div>
+
+
+                <!-- Name Input -->
+
+                <div class="form-group">
+
+                    <label for="userName">Your Name</label>
+
+                    <input
+                        type="text"
+                        id="userName"
+                        placeholder="Enter your name..."
+                        maxlength="30"
+                        autocomplete="off"
+                    >
+
+                    <div class="input-footer">
+                        <span>Make it personal</span>
+                        <span id="charCount">0 / 30</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Age Input -->
+
+                <div class="form-group">
+
+                    <label for="userAge">Your Age</label>
+
+                    <input
+                        type="number"
+                        id="userAge"
+                        placeholder="Enter your age..."
+                        min="1"
+                        max="120"
+                    >
+
+                    <div class="input-footer">
+                        <span>Age 18+ is considered adult</span>
+                    </div>
+
+                </div>
+
+
+<div class="theme-section">
+
+    <h3>Choose Your Theme</h3>
+    <p>Give your greeting a beautiful look.</p>
+
+    <div class="theme-options">
+
+        <button class="theme-btn active" data-theme="gold">
+            Gold
+        </button>
+
+        <button class="theme-btn" data-theme="rose">
+            Rose
+        </button>
+
+        <button class="theme-btn" data-theme="emerald">
+            Emerald
+        </button>
+
+        <button class="theme-btn" data-theme="purple">
+            Purple
+        </button>
+
+    </div>
+
+</div>
+
+                <!-- Action Button -->
+
+                <button id="clearBtn" class="clear-btn">
+                    <span></span>
+                    Clear All
+                </button>
+
+                
+<!-- Greeting Style Selector -->
+
+<div class="style-section">
+
+    <h3>Greeting Style</h3>
+
+    <div class="style-options">
+
+        <button class="style-btn active" data-style="friendly">
+        Friendly
+        </button>
+
+        <button class="style-btn" data-style="professional">
+            Professional
+        </button>
+
+        <button class="style-btn" data-style="cute">
+        Cute
+        </button>
+
+        <button class="style-btn" data-style="funny">
+            Funny
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- Surprise Me Button -->
+
+<button id="surpriseBtn" class="surprise-btn">
+    Surprise Me
+</button>
+
+
+
+                <p class="privacy-note">
+                Your details stay in this browser session.
+                </p>
+
+            </div>
+
+
+            <!-- Preview Panel -->
+
+            <div class="preview-panel">
+
+                <div class="preview-header">
+
+                    <div>
+                        <span class="small-label">YOUR RESULT</span>
+                        <h2>Live Preview</h2>
+                    </div>
+
+                    <span class="live-status">
+                        <span class="live-dot"></span>
+                        LIVE
+                    </span>
+
+                </div>
+
+
+                <!-- Greeting Card -->
+
+                <div class="greeting-card" id="greetingCard">
+
+                    <div class="card-decoration"></div>
+
+                    <span class="card-label" id="timeGreeting">
+                        A WARM WELCOME
+                    </span>
+
+                    <h2 id="greetingText">
+                        Hello, Friend!
+                    </h2>
+
+                    <p id="greetingMessage">
+                        It's wonderful to have you here.
+                        Let's create something beautiful.
+                    </p>
+
+                    <div class="card-divider"></div>
+
+                    <div class="age-result" id="ageResult">
+                        <span>AGE STATUS</span>
+                        <strong>Waiting for your age...</strong>
+                    </div>
+
+                    <div class="card-footer">
+                        MADE WITH <span>♥</span> AT lumora-greeting-studio
+                    </div>
+
+                </div>
+
+
+                <p class="preview-note">
+                    Your greeting updates automatically as you type.
+                </p>
+
+
+                <div class="greeting-actions">
+
+    <button id="copyGreetingBtn" class="copy-btn">
+        <span></span> Copy Greeting
+    </button>
+
+    <button id="celebrateBtn" class="celebrate-btn">
+    Celebrate
+</button>
+
+
+<button id="downloadBtn" class="download-btn">
+    <span></span> Download Card
+</button>
+
+
+
+            </div>
+
+
+
+</div>
+
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <p>2026 lumora-greeting-studio. Crafted with creativity.</p>
+            <span class="footer-heart">♥</span>
+        </footer>
+
+    </main>
+
+
+    <!-- GSAP -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
